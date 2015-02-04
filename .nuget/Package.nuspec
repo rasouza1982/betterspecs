@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>BetterSpecs</id>
+    <version>1.6</version>
+    <authors>YCodeTeam</authors>
+    <owners>Yan de Lima Justino</owners>
+    <licenseUrl>https://github.com/ycodeteam/betterspecs</licenseUrl>
+    <projectUrl>https://github.com/ycodeteam/betterspecs</projectUrl>
+    <iconUrl>https://github.com/ycodeteam/betterspecs</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>BetterSpecs</description>
+    <tags>BDD Tests MSTest</tags>
+  </metadata>
+</package>
