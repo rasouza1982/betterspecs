@@ -1,6 +1,8 @@
 # BetterSpecs
+Spec is a great tool in the behavior-driven development (BDD) process of writing human readable specifications that direct and validate the development of your application. BetterSpecs is the simple way to bring the power of spec to your MSTest tool. 
 
-The simple way to bring the power of spec to your MSTest tool. To use Betterspec in your MSTest project use this command:
+## Install
+To use Betterspec in your MSTest project use this command:
 
 ```csharp
 PM> Install-Package Danzor
