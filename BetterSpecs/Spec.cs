@@ -7,18 +7,18 @@ namespace BetterSpecs
 {
     public class Spec
     {
-        private int indentation;
+        private int _indentation;
 
         protected Spec(int indentation = 0)
         {
-            this.indentation = indentation;
+            this._indentation = indentation;
         }
 
         public Action this[string message]
         {
             set 
             {
-                Speclog.Current.Write(message, indentation);
+                Speclog.Current.Write(message, _indentation);
                 value.Invoke(); 
             }
         }
