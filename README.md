@@ -5,7 +5,7 @@ Spec is a great tool in the behavior-driven development (BDD) process of writing
 To use Betterspec in your MSTest project use this command:
 
 ```csharp
-PM> Install-Package Danzor
+PM> Install-Package BetterSpecs
 ```
 
 ## using Better spec
