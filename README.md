@@ -1,4 +1,4 @@
-# BetterSpecs
+# BetterSpecs ![alt tag](https://travis-ci.org/ycodeteam/betterspecs.svg?branch=master)
 Spec is a great tool in the behavior-driven development (BDD) process of writing human readable specifications that direct and validate the development of your application. BetterSpecs is the simple way to bring the power of spec to your MSTest tool. 
 
 ## Install
