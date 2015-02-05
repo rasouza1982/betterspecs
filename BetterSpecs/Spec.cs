@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace BetterSpecs
 {
     public class Spec
     {
-        private string _prefix;
-        private int _indentation;
+        private readonly string _prefix;
+        private readonly int _indentation;
 
         protected Spec(int indentation = 0, string prefix = "")
         {
@@ -27,5 +24,5 @@ namespace BetterSpecs
     }
     
     public class It : Spec { public It() : base(4, "It") { } }
-    public class Context : Spec { public Context() : base() { } }
+    public class Context : Spec { }
 }

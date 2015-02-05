@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace BetterSpecs
 {
@@ -9,8 +6,8 @@ namespace BetterSpecs
     {
         public It it { get; private set; }
         public Context context { get; private set; }
-        public Action before { set { value.Invoke(); } }
-        public Action let { set { value.Invoke(); } }
+        public static Action let { set { value.Invoke(); } }
+        public static Action before { set { value.Invoke(); } }
 
         public SpecContext()
         {

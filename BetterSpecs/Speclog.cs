@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace BetterSpecs
@@ -10,7 +9,7 @@ namespace BetterSpecs
         private static Speclog _current;
         private ICollection<string> _logs;
 
-        private Speclog() 
+        private Speclog()
         {
             _logs = new List<string>();
         }
@@ -26,7 +25,7 @@ namespace BetterSpecs
 
         public void Clear()
         {
-            this._logs.Clear();
+            _logs.Clear();
         }
 
         public override string ToString()
@@ -46,17 +45,15 @@ namespace BetterSpecs
 
         private void RegisterLogs(string message, int indentation)
         {
-            message = PrepareMessage(message, indentation);
-            _logs.Add(message);
+            _logs.Add(Indentation(message, indentation));
         }
 
         private void PrintMessage(string message, int indentation)
         {
-            message = PrepareMessage(message, indentation);
-            Console.WriteLine(message);
+            Console.WriteLine(Indentation(message, indentation));
         }
 
-        private static string PrepareMessage(string message, int indentation)
+        private string Indentation(string message, int indentation)
         {
             var indent = string.Empty;
             for (int i = 0; i < indentation; i++)
