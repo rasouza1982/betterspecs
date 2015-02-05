@@ -1,5 +1,7 @@
 # BetterSpecs ![alt tag](https://travis-ci.org/ycodeteam/betterspecs.svg?branch=master)
-Spec is a great tool in the behavior-driven development (BDD) process of writing human readable specifications that direct and validate the development of your application. BetterSpecs is the simple way to bring the power of spec to your MSTest tool. 
+xSpec "is a great tool in the behavior-driven development (BDD) process of writing human readable specifications that direct and validate the development of your application" ([betterspecs.org](http://betterspecs.org/)). 
+
+BetterSpecs is the simple way to bring the power of spec to your tests. Based in xSpec (Like RSpec, and Jasmine) tools, BetterSpecs, improves tests experience on MSTest tools. 
 
 ## Install
 To install Betterspec in your MSTest project use this command:
