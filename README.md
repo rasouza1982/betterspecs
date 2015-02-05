@@ -28,7 +28,7 @@ public void describe_speccontext_while_using_it()
 {
     context["when use SpecContext class"] = () =>
     {
-        it["it is work very well"] = () => Assert.IsTrue(true);
+        it["it's working very well"] = () => Assert.IsTrue(true);
     };
 }
 ````
@@ -42,7 +42,7 @@ public void describe_speccontext_while_using_it()
     {
         context["with two context"] = () =>
         {
-            it["it is work very well"] = () => Assert.IsTrue(true);
+            it["it's working very well"] = () => Assert.IsTrue(true);
         };
     };
 }
@@ -58,21 +58,21 @@ public void describe_speccontext_while_using_it()
         let = () => Console.WriteLine("Calling 'let'");
         before = () => Console.WriteLine("Calling 'before'");
         
-        it["it is work very well"] = () => Assert.IsTrue(true);
+        it["it's working very well"] = () => Assert.IsTrue(true);
     };
 }
 ````
 
 ### Output spec
-When run tests, the result in Test Explore will be like this:
+When finished run tests, the output result will be:
 
 ```
 when use SpecContext class
 with other internal context
-    it is work very well
-    it is work very well
-    it is work very well
+    it's working very well
+    it's working very well
+    it's working very well
 with second internal context
-    it is work very well too!!!
+    it's working very well too!!!
 Great!!!
 ```
