@@ -1,18 +1,16 @@
 # BetterSpecs ![alt tag](https://travis-ci.org/ycodeteam/betterspecs.svg?branch=master)
-xSpec "is a great tool in the behavior-driven development (BDD) process of writing human readable specifications that direct and validate the development of your application" ([betterspecs.org](http://betterspecs.org/)). 
+>xSpec "is a great tool in the behavior-driven development (BDD) process of writing human readable specifications that direct and validate the development of your application" ([betterspecs.org](http://betterspecs.org/)). 
 
 BetterSpecs is the simple way to bring the power of spec to your tests. Based in xSpec (Like RSpec, and Jasmine) tools, BetterSpecs, improves tests experience on MSTest tools. 
 
-## Install
+### :package: install package
 To install Betterspec in your MSTest project use this command:
 
 ```csharp
 PM> Install-Package BetterSpecs
 ```
 
-## using Better spec
-
-### Import class
+### :package: using betterspecs
 ```csharp
 using BetterSpecs;
 
@@ -23,7 +21,7 @@ public class SpecContextTests : SpecContext
 }
 ````
 
-### Context
+### :abcd: context
 ```csharp
 [TestMethod]
 public void describe_speccontext_while_using_it()
@@ -35,7 +33,7 @@ public void describe_speccontext_while_using_it()
 }
 ````
 
-### mixin contexts
+### :abcd:  mixin contexts
 ```csharp
 [TestMethod]
 public void describe_speccontext_while_using_it()
@@ -50,7 +48,7 @@ public void describe_speccontext_while_using_it()
 }
 ````
 
-### before and let
+### :abcd: before and let
 ```csharp
 [TestMethod]
 public void describe_speccontext_while_using_it()
@@ -65,7 +63,7 @@ public void describe_speccontext_while_using_it()
 }
 ````
 
-### Output spec
+### :abcd: output spec
 When finished run tests, the output will be like this:
 
 ```
