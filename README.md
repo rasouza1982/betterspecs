@@ -64,13 +64,10 @@ public void describe_speccontext_while_using_it()
 ````
 
 ### Output spec
-When finished run tests, the output result will be:
+When finished run tests, the output will be like this:
 
 ```
 when use SpecContext class
 with other internal context
     It works very well
-with second internal context
-    It works very well too!!!
-Great!!!
 ```
