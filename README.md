@@ -1,7 +1,7 @@
 # BetterSpecs ![alt tag](https://travis-ci.org/ycodeteam/betterspecs.svg?branch=master)
 >xSpec "is a great tool in the behavior-driven development (BDD) process of writing human readable specifications that direct and validate the development of your application" ([betterspecs.org](http://betterspecs.org/)). 
 
-BetterSpecs is the simple way to bring the power of spec to your tests. Based in xSpec (Like RSpec, and Jasmine) tools, BetterSpecs, improves tests experience on MSTest tools. 
+BetterSpecs is the simple way to bring the power of spec to your tests. Based in xSpec (Like RSpec, and Jasmine) tools, BetterSpecs, improves tests experience on MSTest or NUnit tools. 
 
 ### :package: install package
 To install Betterspec in your MSTest project use this command:
@@ -50,15 +50,16 @@ public void describe_speccontext_while_using_it()
 
 ### :abcd: before and let
 ```csharp
-[TestMethod]
-public void describe_speccontext_while_using_it()
+[Test]
+public void describe_register_user()
 {
-    context["when use SpecContext class"] = () =>
+    User userEmail = null;
+    before = () => DomainEvent.Register<UserRegistered>(u => userEmail = u.UserCreated);
+
+    context["when create a user"] = () =>
     {
-        let = () => Console.WriteLine("Calling 'let'");
-        before = () => Console.WriteLine("Calling 'before'");
-        
-        it["works very well"] = () => Assert.IsTrue(true);
+        user = let<User>(() => new User(new TenantId(), "teste", "master", "teste@123.com"));
+        it["prepares to notify"] = () => Assert.AreEqual(user, userEmail);
     };
 }
 ````
