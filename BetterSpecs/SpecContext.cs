@@ -13,10 +13,5 @@ namespace BetterSpecs
             this.it = new It();
             this.context = new Context();
         }
-
-        public T let<T>(Func<T> a)
-        {
-            return a.Invoke();
-        }
     }
 }
