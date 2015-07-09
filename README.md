@@ -21,12 +21,12 @@ public class SpecContextTests : SpecContext
 }
 ````
 
-### context
+### describe
 ```csharp
 [TestMethod]
 public void describe_speccontext_while_using_it()
 {
-    context["when use SpecContext class"] = () =>
+    describe["when use SpecContext class"] = () =>
     {
         it["works very well"] = () => Assert.IsTrue(true);
     };
@@ -48,18 +48,24 @@ public void describe_speccontext_while_using_it()
 }
 ````
 
-### before and let
+### using let
+defer the instance creation
+
 ```csharp
 [Test]
 public void describe_register_user()
 {
-    User userEmail = null;
-    before = () => DomainEvent.Register<UserRegistered>(u => userEmail = u.UserCreated);
-
     context["when create a user"] = () =>
     {
-        user = let<User>(() => new User(new TenantId(), "teste", "master", "teste@123.com"));
-        it["prepares to notify"] = () => Assert.AreEqual(user, userEmail);
+        User user = null;
+        let.Add("user", () => 
+        { 
+          user = new User("teste@teste.com");
+          return user;
+        });
+        
+        it["is null"] = () => Assert.Null(user);
+        it["is not null"] = () => Assert.AreEqual(user, let["user"]);
     };
 }
 ````
