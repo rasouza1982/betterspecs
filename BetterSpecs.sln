@@ -13,8 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E89001
 		.nuget\Package.nuspec = .nuget\Package.nuspec
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterSpecs.Tests", "BetterSpecs.Tests\BetterSpecs.Tests.csproj", "{44B27769-E68C-4193-A125-AE05361B1370}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,10 +23,6 @@ Global
 		{7DDBD1FC-5E62-49BF-88B9-F9A6F1C1D832}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DDBD1FC-5E62-49BF-88B9-F9A6F1C1D832}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DDBD1FC-5E62-49BF-88B9-F9A6F1C1D832}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44B27769-E68C-4193-A125-AE05361B1370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44B27769-E68C-4193-A125-AE05361B1370}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44B27769-E68C-4193-A125-AE05361B1370}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44B27769-E68C-4193-A125-AE05361B1370}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
