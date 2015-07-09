@@ -7,16 +7,10 @@ namespace BetterSpecs.Tests
     public class SpecContextTests : SpecContext
     {
 
-        [TestInitialize]
-        public void before_each()
-        {
-            Speclog.Current.Clear();
-        }
-
         [TestMethod]
         public void describe_speccontext_while_using_it()
         {
-            context["when use SpecContext class"] = () =>
+            describe["when use SpecContext class"] = () =>
             {
                 context["with other internal context"] = () =>
                 {
@@ -35,12 +29,10 @@ namespace BetterSpecs.Tests
         }
 
         [TestMethod]
-        public void describe_before()
+        public void mix_contexts()
         {
             context["when use SpecContext class"] = () =>
             {
-                before = () => Console.WriteLine("Calling 'before' statment");
-
                 context["with other internal context"] = () =>
                 {
                     it["it is work very well"] = () => Assert.IsTrue(true);
@@ -51,15 +43,22 @@ namespace BetterSpecs.Tests
         }
 
         [TestMethod]
-        public void describe_speccontext_log()
+        public void using_let()
         {
+            var test1 = string.Empty;
+            var test2 = string.Empty;
+
+            let.Add("test1", () => { test1 = "value"; return test1; });
+            let.Add("test2", () => { test2 = "value"; return test2; });
+
             context["with other internal context"] = () =>
             {
-                it["it is work very well"] = () => Assert.IsTrue(true);
+                it["test is empty"] = () => Assert.AreEqual("", test1);
+                it["test is full"] = () => Assert.AreEqual("value", let["test1"]);
+
+                it["test is empty"] = () => Assert.AreEqual("", test2);
+                it["test is full"] = () => Assert.AreEqual("value", let["test2"]);
             };
-
-            Console.WriteLine(Speclog.Current.ToString());
         }
-
     }
 }
