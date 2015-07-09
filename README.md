@@ -21,7 +21,7 @@ public class SpecContextTests : SpecContext
 }
 ````
 
-### :abcd: context
+### context
 ```csharp
 [TestMethod]
 public void describe_speccontext_while_using_it()
@@ -33,7 +33,7 @@ public void describe_speccontext_while_using_it()
 }
 ````
 
-### :abcd:  mixin contexts
+### mixin contexts
 ```csharp
 [TestMethod]
 public void describe_speccontext_while_using_it()
@@ -48,7 +48,7 @@ public void describe_speccontext_while_using_it()
 }
 ````
 
-### :abcd: before and let
+### before and let
 ```csharp
 [Test]
 public void describe_register_user()
@@ -64,7 +64,7 @@ public void describe_register_user()
 }
 ````
 
-### :abcd: output spec
+### output spec
 When finished run tests, the output will be like this:
 
 ```
